@@ -17,9 +17,8 @@
 		6EB733B02A1BA15E0074E82B /* ios_lead_essentials_exercisesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB733AF2A1BA15E0074E82B /* ios_lead_essentials_exercisesTests.swift */; };
 		6EB733BA2A1BA15E0074E82B /* ios_lead_essentials_exercisesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB733B92A1BA15E0074E82B /* ios_lead_essentials_exercisesUITests.swift */; };
 		6EB733BC2A1BA15E0074E82B /* ios_lead_essentials_exercisesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB733BB2A1BA15E0074E82B /* ios_lead_essentials_exercisesUITestsLaunchTests.swift */; };
-		6EB733EF2A1BA2340074E82B /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB733ED2A1BA2340074E82B /* EssentialFeed.framework */; };
-		6EB733F02A1BA2340074E82B /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB733ED2A1BA2340074E82B /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6EB733F12A1BA2340074E82B /* EssentialFeedTests.xctest in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 6EB733EE2A1BA2340074E82B /* EssentialFeedTests.xctest */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EB733FE2A20C67C0074E82B /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB733ED2A1BA2340074E82B /* EssentialFeed.framework */; };
+		6EB733FF2A20C67C0074E82B /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB733ED2A1BA2340074E82B /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,26 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6EB733F22A1BA2340074E82B /* Embed Frameworks */ = {
+		6EB734002A20C67C0074E82B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6EB733F02A1BA2340074E82B /* EssentialFeed.framework in Embed Frameworks */,
+				6EB733FF2A20C67C0074E82B /* EssentialFeed.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6EB733F32A1BA2340074E82B /* Embed PlugIns */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				6EB733F12A1BA2340074E82B /* EssentialFeedTests.xctest in Embed PlugIns */,
-			);
-			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -88,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EB733EF2A1BA2340074E82B /* EssentialFeed.framework in Frameworks */,
+				6EB733FE2A20C67C0074E82B /* EssentialFeed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +169,7 @@
 				6EB7338E2A1BA15D0074E82B /* Sources */,
 				6EB7338F2A1BA15D0074E82B /* Frameworks */,
 				6EB733902A1BA15D0074E82B /* Resources */,
-				6EB733F22A1BA2340074E82B /* Embed Frameworks */,
-				6EB733F32A1BA2340074E82B /* Embed PlugIns */,
+				6EB734002A20C67C0074E82B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -485,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47KQE9A93N;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-lead-essentials-exercises/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -513,6 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47KQE9A93N;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-lead-essentials-exercises/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
