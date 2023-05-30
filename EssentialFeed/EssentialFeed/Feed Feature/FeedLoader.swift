@@ -17,5 +17,3 @@ protocol FeedLoader {
 
     func load(completion: @escaping (LoadFeedResult<Error>) -> Void)
 }
-
-extension LoadFeedResult: Equatable where Error: Equatable {}
