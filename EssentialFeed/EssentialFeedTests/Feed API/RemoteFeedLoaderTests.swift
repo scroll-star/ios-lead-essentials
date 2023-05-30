@@ -9,7 +9,7 @@ import XCTest
 import EssentialFeed
 
 final class RemoteFeedLoaderTests: XCTestCase {
-
+    
     func test_init_doesNotRequestDataFromURL() {
         let (_, client) = makeSUT()
         
@@ -37,7 +37,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
     func test_load_deliversErrorOnClientError() {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWith: .failure(RemoteFeedLoader.Error.connectivity), when: {
+        expect(sut, toCompleteWith: failure(.connectivity), when: {
             let clientError = NSError(domain: "Test", code: 0)
             client.complete(with: clientError)
         })
@@ -49,7 +49,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
         let samples = [199, 201, 300, 400, 500]
         
         samples.enumerated().forEach { index, code in
-            expect(sut, toCompleteWith: .failure(RemoteFeedLoader.Error.invalidData), when: {
+            expect(sut, toCompleteWith: failure(.invalidData), when: {
                 let json = makeItemsJSON([])
                 client.complete(withStatusCode: code, data: json, at: index)
             })
@@ -59,7 +59,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
     func test_load_deliversErrorOn200HTTPResponseWithInvalidJSON() {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWith: .failure(RemoteFeedLoader.Error.invalidData), when: {
+        expect(sut, toCompleteWith: failure(.invalidData), when: {
             let invalidJSON = Data("invalid json".utf8)
             client.complete(withStatusCode: 200, data: invalidJSON)
         })
@@ -99,13 +99,13 @@ final class RemoteFeedLoaderTests: XCTestCase {
         let url = URL(string: "http://any-url.com")!
         let client = HTTPClientSpy()
         var sut: RemoteFeedLoader? = RemoteFeedLoader(url: url, client: client)
-
+        
         var capturedResults = [RemoteFeedLoader.Result]()
         sut?.load { capturedResults.append($0) }
-
+        
         sut = nil
         client.complete(withStatusCode: 200, data: makeItemsJSON([]))
-
+        
         XCTAssertTrue(capturedResults.isEmpty)
     }
 }
@@ -146,32 +146,36 @@ private extension RemoteFeedLoaderTests {
     }
     
     private func expect(_ sut: RemoteFeedLoader, toCompleteWith expectedResult: RemoteFeedLoader.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
-            let exp = expectation(description: "Wait for load completion")
-
-            sut.load { receivedResult in
-                switch (receivedResult, expectedResult) {
-                case let (.success(receivedItems), .success(expectedItems)):
-                    XCTAssertEqual(receivedItems, expectedItems, file: file, line: line)
-
-                case let (.failure(receivedError as RemoteFeedLoader.Error), .failure(expectedError as RemoteFeedLoader.Error)):
-                    XCTAssertEqual(receivedError, expectedError, file: file, line: line)
-
-                default:
-                    XCTFail("Expected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
-                }
-
-                exp.fulfill()
+        let exp = expectation(description: "Wait for load completion")
+        
+        sut.load { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedItems), .success(expectedItems)):
+                XCTAssertEqual(receivedItems, expectedItems, file: file, line: line)
+                
+            case let (.failure(receivedError as RemoteFeedLoader.Error), .failure(expectedError as RemoteFeedLoader.Error)):
+                XCTAssertEqual(receivedError, expectedError, file: file, line: line)
+                
+            default:
+                XCTFail("Expected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
             }
-
-            action()
-
-            wait(for: [exp], timeout: 1.0)
+            
+            exp.fulfill()
         }
+        
+        action()
+        
+        wait(for: [exp], timeout: 1.0)
+    }
     
     func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
         addTeardownBlock { [weak instance] in
             XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
         }
+    }
+    
+    func failure(_ error: RemoteFeedLoader.Error) -> RemoteFeedLoader.Result {
+        return .failure(error)
     }
     
     final class HTTPClientSpy: HTTPClient {
