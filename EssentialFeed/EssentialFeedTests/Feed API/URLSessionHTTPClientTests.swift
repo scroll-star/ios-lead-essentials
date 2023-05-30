@@ -40,17 +40,29 @@ final class URLSessionHTTPClientTests: XCTestCase {
 private extension URLSessionHTTPClientTests {
     
     final class URLSessionSpy: URLSession {
-        private var stubs = [URL: URLSessionDataTask]()
+        private var stubs = [URL: Stub]()
         
-        func stub(url: URL, task: URLSessionDataTask) {
-            stubs[url] = task
+        private struct Stub {
+            let task: URLSessionDataTask
+            let error: Error?
+        }
+        
+        func stub(
+            url: URL,
+            task: URLSessionDataTask = FakeURLSessionDataTask(),
+            error: Error? = nil
+        ) {
+            stubs[url] = Stub(task: task, error: error)
         }
         
         override func dataTask(
             with url: URL,
             completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
         ) -> URLSessionDataTask {
-            return stubs[url] ?? FakeURLSessionDataTask()
+            guard let stub = stubs[url] else {
+                fatalError("Couldn't find stub for url: \(url)")
+            }
+            return stub.task
         }
     }
     
