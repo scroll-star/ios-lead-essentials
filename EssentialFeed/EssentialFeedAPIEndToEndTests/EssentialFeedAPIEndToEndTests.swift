@@ -10,8 +10,6 @@ import EssentialFeed
 
 final class EssentialFeedAPIEndToEndTests: XCTestCase {
 
-    private var expectationTimeout: TimeInterval { 5.0 }
-
     func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
         switch getFeedResult() {
         case let .success(items)?:
@@ -53,7 +51,7 @@ private extension EssentialFeedAPIEndToEndTests {
             receivedResult = result
             exp.fulfill()
         }
-        wait(for: [exp], timeout: expectationTimeout)
+        wait(for: [exp], timeout: 15.0)
 
         return receivedResult
     }
