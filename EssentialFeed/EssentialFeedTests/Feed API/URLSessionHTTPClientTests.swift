@@ -32,6 +32,8 @@ final class URLSessionHTTPClient {
 
 final class URLSessionHTTPClientTests: XCTestCase {
 
+    var expectationTimeout: TimeInterval { 1.0 }
+
     override func setUp() {
         super.setUp()
 
@@ -61,7 +63,7 @@ extension URLSessionHTTPClientTests {
 
         makeSUT().get(from: url) { _ in }
 
-        wait(for: [exp], timeout: 1.0)
+        wait(for: [exp], timeout: expectationTimeout)
     }
     
     func test_getFromURL_failsOnRequestError() {
@@ -107,7 +109,7 @@ extension URLSessionHTTPClientTests {
             exp.fulfill()
         }
 
-        wait(for: [exp], timeout: 1.0)
+        wait(for: [exp], timeout: expectationTimeout)
     }
 }
 
@@ -144,7 +146,7 @@ private extension URLSessionHTTPClientTests {
             exp.fulfill()
         }
 
-        wait(for: [exp], timeout: 1.0)
+        wait(for: [exp], timeout: expectationTimeout)
 
         return receivedError
     }
