@@ -86,9 +86,26 @@ extension URLSessionHTTPClientTests {
 // MARK - Utils (private)
 
 private extension URLSessionHTTPClientTests {
-
-    func makeSUT() -> URLSessionHTTPClient {
-        .init()
+    
+    func makeSUT(file: StaticString = #file, line: UInt = #line) -> URLSessionHTTPClient {
+        let sut = URLSessionHTTPClient()
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
+    }
+    
+    private func trackForMemoryLeaks(
+        _ instance: AnyObject,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(
+                instance,
+                "Instance should have been deallocated. Potential memory leak.",
+                file: file,
+                line: line
+            )
+        }
     }
 }
 
