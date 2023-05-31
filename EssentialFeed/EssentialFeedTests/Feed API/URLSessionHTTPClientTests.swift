@@ -53,7 +53,7 @@ extension URLSessionHTTPClientTests {
             exp.fulfill()
         }
 
-        URLSessionHTTPClient().get(from: url) { _ in }
+        makeSUT().get(from: url) { _ in }
 
         wait(for: [exp], timeout: 1.0)
     }
@@ -63,7 +63,7 @@ extension URLSessionHTTPClientTests {
         let error = NSError(domain: "any error", code: 1)
         URLProtocolStub.stub(data: nil, response: nil, error: error)
         
-        let sut = URLSessionHTTPClient()
+        let sut = makeSUT()
         
         let exp = expectation(description: "Wait for completion")
         
@@ -84,6 +84,15 @@ extension URLSessionHTTPClientTests {
 }
 
 // MARK - Utils (private)
+
+private extension URLSessionHTTPClientTests {
+
+    func makeSUT() -> URLSessionHTTPClient {
+        .init()
+    }
+}
+
+// MARK - Namespace types
 
 private extension URLSessionHTTPClientTests {
     
