@@ -141,31 +141,64 @@ final class CodableFeedStoreTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
 
+    func test_retrieve_hasNoSideEffectsOnNonEmptyCache() {
+        let sut = makeSUT()
+        let feed = uniqueImageFeed().local
+        let timestamp = Date()
+        let exp = expectation(description: "Wait for cache retrieval")
 
-    // - MARK: Helpers
+        sut.insert(feed, timestamp: timestamp) { insertionError in
+            XCTAssertNil(insertionError, "Expected feed to be inserted successfully")
 
-    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> CodableFeedStore {
+            sut.retrieve { firstResult in
+                sut.retrieve { secondResult in
+                    switch (firstResult, secondResult) {
+                    case let (.found(firstFound), .found(secondFound)):
+                        XCTAssertEqual(firstFound.feed, feed)
+                        XCTAssertEqual(firstFound.timestamp, timestamp)
+
+                        XCTAssertEqual(secondFound.feed, feed)
+                        XCTAssertEqual(secondFound.timestamp, timestamp)
+
+                    default:
+                        XCTFail("Expected retrieving twice from non empty cache to deliver same found result with feed \(feed) and timestamp \(timestamp), got \(firstResult) and \(secondResult) instead")
+                    }
+
+                    exp.fulfill()
+                }
+            }
+        }
+
+        wait(for: [exp], timeout: 1.0)
+    }
+}
+
+// - MARK: Helpers
+
+private extension CodableFeedStoreTests {
+
+    func makeSUT(file: StaticString = #file, line: UInt = #line) -> CodableFeedStore {
         let sut = CodableFeedStore(storeURL: testSpecificStoreURL())
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
 
-    private func testSpecificStoreURL() -> URL {
+    func testSpecificStoreURL() -> URL {
         FileManager.default.urls(
             for: .cachesDirectory,
             in: .userDomainMask
         ).first!.appendingPathComponent("\(type(of: self)).store")
     }
 
-    private func setupEmptyStoreState() {
+    func setupEmptyStoreState() {
         deleteStoreArtifacts()
     }
 
-    private func undoStoreSideEffects() {
+    func undoStoreSideEffects() {
         deleteStoreArtifacts()
     }
 
-    private func deleteStoreArtifacts() {
+    func deleteStoreArtifacts() {
         try? FileManager.default.removeItem(at: testSpecificStoreURL())
     }
 }
