@@ -33,6 +33,7 @@
 		6EC271892A32135700F308C4 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC271882A32135700F308C4 /* SharedTestHelpers.swift */; };
 		6EC2718B2A321EC500F308C4 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2718A2A321EC500F308C4 /* FeedCachePolicy.swift */; };
 		6EC2718D2A322F3900F308C4 /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2718C2A322F3900F308C4 /* CodableFeedStoreTests.swift */; };
+		6EC2718F2A33110600F308C4 /* CodableFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2718E2A33110600F308C4 /* CodableFeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		6EC271882A32135700F308C4 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		6EC2718A2A321EC500F308C4 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		6EC2718C2A322F3900F308C4 /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
+		6EC2718E2A33110600F308C4 /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 		6EC271762A2E431C00F308C4 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
+				6EC2718E2A33110600F308C4 /* CodableFeedStore.swift */,
 				6EC2718A2A321EC500F308C4 /* FeedCachePolicy.swift */,
 				6EC271792A2E439200F308C4 /* FeedStore.swift */,
 				6EC2717D2A2F1F3600F308C4 /* LocalFeedImage.swift */,
@@ -374,6 +377,7 @@
 				6EC2717E2A2F1F3600F308C4 /* LocalFeedImage.swift in Sources */,
 				6EC2717A2A2E439200F308C4 /* FeedStore.swift in Sources */,
 				6EC271782A2E433100F308C4 /* LocalFeedLoader.swift in Sources */,
+				6EC2718F2A33110600F308C4 /* CodableFeedStore.swift in Sources */,
 				6EB7342B2A20CCB80074E82B /* FeedLoader.swift in Sources */,
 				6EB734322A24E1BE0074E82B /* FeedItemsMapper.swift in Sources */,
 				6EB734282A20CCAB0074E82B /* RemoteFeedLoader.swift in Sources */,
