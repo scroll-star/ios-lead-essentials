@@ -34,6 +34,7 @@
 		6EC2718B2A321EC500F308C4 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2718A2A321EC500F308C4 /* FeedCachePolicy.swift */; };
 		6EC2718D2A322F3900F308C4 /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2718C2A322F3900F308C4 /* CodableFeedStoreTests.swift */; };
 		6EC2718F2A33110600F308C4 /* CodableFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2718E2A33110600F308C4 /* CodableFeedStore.swift */; };
+		6EC271912A3367A700F308C4 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC271902A3367A700F308C4 /* FeedStoreSpecs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		6EC2718A2A321EC500F308C4 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		6EC2718C2A322F3900F308C4 /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 		6EC2718E2A33110600F308C4 /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
+		6EC271902A3367A700F308C4 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				6EC271812A2F67DE00F308C4 /* Helpers */,
 				6EC271742A2E2E2A00F308C4 /* CacheFeedUseCaseTests.swift */,
 				6EC2718C2A322F3900F308C4 /* CodableFeedStoreTests.swift */,
+				6EC271902A3367A700F308C4 /* FeedStoreSpecs.swift */,
 				6EC2717F2A2F679000F308C4 /* LoadFeedFromCacheUseCaseTests.swift */,
 				6EC271842A320D2500F308C4 /* ValidateFeedCacheUseCaseTests.swift */,
 			);
@@ -397,6 +400,7 @@
 				6EC271892A32135700F308C4 /* SharedTestHelpers.swift in Sources */,
 				6EC271752A2E2E2A00F308C4 /* CacheFeedUseCaseTests.swift in Sources */,
 				6EC271802A2F679000F308C4 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
+				6EC271912A3367A700F308C4 /* FeedStoreSpecs.swift in Sources */,
 				6EB734352A2648DC0074E82B /* URLSessionHTTPClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
