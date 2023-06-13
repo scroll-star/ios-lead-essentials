@@ -40,6 +40,7 @@
 		6EC271972A3369C300F308C4 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC271962A3369C300F308C4 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */; };
 		6EC271992A336A3600F308C4 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC271982A336A3600F308C4 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
 		6EC2719C2A38725200F308C4 /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2719B2A38725200F308C4 /* CoreDataFeedStoreTests.swift */; };
+		6EC2719F2A3872D600F308C4 /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2719E2A3872D600F308C4 /* CoreDataFeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		6EC271962A3369C300F308C4 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableInsertFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		6EC271982A336A3600F308C4 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		6EC2719B2A38725200F308C4 /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
+		6EC2719E2A3872D600F308C4 /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC2718E2A33110600F308C4 /* CodableFeedStore.swift */,
+				6EC2719E2A3872D600F308C4 /* CoreDataFeedStore.swift */,
 				6EC2718A2A321EC500F308C4 /* FeedCachePolicy.swift */,
 				6EC271792A2E439200F308C4 /* FeedStore.swift */,
 				6EC2717D2A2F1F3600F308C4 /* LocalFeedImage.swift */,
@@ -407,6 +410,7 @@
 				6EB7342B2A20CCB80074E82B /* FeedLoader.swift in Sources */,
 				6EB734322A24E1BE0074E82B /* FeedItemsMapper.swift in Sources */,
 				6EB734282A20CCAB0074E82B /* RemoteFeedLoader.swift in Sources */,
+				6EC2719F2A3872D600F308C4 /* CoreDataFeedStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
