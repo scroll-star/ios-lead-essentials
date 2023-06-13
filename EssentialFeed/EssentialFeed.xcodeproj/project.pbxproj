@@ -42,6 +42,7 @@
 		6EC2719C2A38725200F308C4 /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2719B2A38725200F308C4 /* CoreDataFeedStoreTests.swift */; };
 		6EC2719F2A3872D600F308C4 /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2719E2A3872D600F308C4 /* CoreDataFeedStore.swift */; };
 		6EC271A22A38755B00F308C4 /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6EC271A02A38755B00F308C4 /* FeedStore.xcdatamodeld */; };
+		6EC271A82A3886E200F308C4 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC271A72A3886E200F308C4 /* CoreDataHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		6EC2719B2A38725200F308C4 /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		6EC2719E2A3872D600F308C4 /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 		6EC271A12A38755B00F308C4 /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
+		6EC271A72A3886E200F308C4 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC2719E2A3872D600F308C4 /* CoreDataFeedStore.swift */,
+				6EC271A72A3886E200F308C4 /* CoreDataHelpers.swift */,
 				6EC271A02A38755B00F308C4 /* FeedStore.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -425,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC271A82A3886E200F308C4 /* CoreDataHelpers.swift in Sources */,
 				6EB7343A2A2786840074E82B /* URLSessionHTTPClient.swift in Sources */,
 				6EB7342C2A20CCB80074E82B /* FeedItem.swift in Sources */,
 				6EC2717C2A2F1F0300F308C4 /* RemoteFeedItem.swift in Sources */,
