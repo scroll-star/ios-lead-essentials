@@ -26,7 +26,25 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6EB7340A2A20CC7E0074E82B"
+            BuildableName = "EssentialFeed.framework"
+            BlueprintName = "EssentialFeed"
+            ReferencedContainer = "container:EssentialFeed.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6EC2727D2A4076DB00F308C4"
+            BuildableName = "EssentialFeediOS.framework"
+            BlueprintName = "EssentialFeediOS"
+            ReferencedContainer = "container:EssentialFeed.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -58,6 +76,17 @@
                BlueprintIdentifier = "6EC271B02A389CAA00F308C4"
                BuildableName = "EssentialFeedCacheIntegrationTests.xctest"
                BlueprintName = "EssentialFeedCacheIntegrationTests"
+               ReferencedContainer = "container:EssentialFeed.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6EC272842A4076DC00F308C4"
+               BuildableName = "EssentialFeediOSTests.xctest"
+               BlueprintName = "EssentialFeediOSTests"
                ReferencedContainer = "container:EssentialFeed.xcodeproj">
             </BuildableReference>
          </TestableReference>
