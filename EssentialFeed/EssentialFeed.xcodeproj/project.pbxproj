@@ -58,6 +58,7 @@
 		6EC2729F2A41EF0400F308C4 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2729E2A41EF0400F308C4 /* FeedImageCell.swift */; };
 		6EC272A12A41F53200F308C4 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272A02A41F53200F308C4 /* UIView+Shimmering.swift */; };
 		6EC272A32A42DF0800F308C4 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272A22A42DF0800F308C4 /* UIImage+TestHelpers.swift */; };
+		6EC272A62A42DF6D00F308C4 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272A52A42DF6D00F308C4 /* UIRefreshControl+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		6EC2729E2A41EF0400F308C4 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		6EC272A02A41F53200F308C4 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		6EC272A22A42DF0800F308C4 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
+		6EC272A52A42DF6D00F308C4 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC272A22A42DF0800F308C4 /* UIImage+TestHelpers.swift */,
+				6EC272A52A42DF6D00F308C4 /* UIRefreshControl+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC272942A41DB5700F308C4 /* FeedViewControllerTests.swift in Sources */,
+				6EC272A62A42DF6D00F308C4 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				6EC2729B2A41DFB500F308C4 /* XCTestsCase+MemoryLeakTracking.swift in Sources */,
 				6EC272A32A42DF0800F308C4 /* UIImage+TestHelpers.swift in Sources */,
 			);
