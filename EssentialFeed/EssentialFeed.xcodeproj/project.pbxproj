@@ -488,7 +488,7 @@
 			children = (
 				6EC272C02A42E6B500F308C4 /* Composers */,
 				6EC272AB2A42E08F00F308C4 /* Controllers */,
-				6EC272C32A448B5000F308C4 /* Models */,
+				6EC272C32A448B5000F308C4 /* Feed Presentation */,
 				6EC272AC2A42E0A000F308C4 /* Views */,
 			);
 			path = "Feed UI";
@@ -518,13 +518,13 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
-		6EC272C32A448B5000F308C4 /* Models */ = {
+		6EC272C32A448B5000F308C4 /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				6EC272C62A448F3600F308C4 /* FeedImageViewModel.swift */,
 				6EC272C42A448B5B00F308C4 /* FeedViewModel.swift */,
 			);
-			path = Models;
+			path = "Feed Presentation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
