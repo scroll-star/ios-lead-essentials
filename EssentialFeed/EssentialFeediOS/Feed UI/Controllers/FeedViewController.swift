@@ -8,7 +8,7 @@
 import UIKit
 
 public final class FeedViewController: UITableViewController {
-    private var refreshController: FeedRefreshViewController?
+    var refreshController: FeedRefreshViewController?
     private var imageLoader: FeedImageDataLoader?
 
     var tableModel = [FeedImageCellController]() {
@@ -16,11 +16,6 @@ public final class FeedViewController: UITableViewController {
     }
 
     private var cellControllers = [IndexPath: FeedImageCellController]()
-
-    convenience init(refreshController: FeedRefreshViewController) {
-        self.init()
-        self.refreshController = refreshController
-    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
