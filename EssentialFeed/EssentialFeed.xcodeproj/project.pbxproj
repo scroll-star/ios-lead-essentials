@@ -203,6 +203,7 @@
 		6EC272DD2A4B2BD500F308C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		6EC272DF2A4B2C4C00F308C4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
 		6EC272E02A4B2CA000F308C4 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
+		6EC272E12A4B2CEA00F308C4 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Feed.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -709,6 +710,7 @@
 				Base,
 				"pt-BR",
 				el,
+				bg,
 			);
 			mainGroup = 6EB734012A20CC7E0074E82B;
 			productRefGroup = 6EB7340C2A20CC7E0074E82B /* Products */;
@@ -915,6 +917,7 @@
 				6EC272DD2A4B2BD500F308C4 /* en */,
 				6EC272DF2A4B2C4C00F308C4 /* pt-BR */,
 				6EC272E02A4B2CA000F308C4 /* el */,
+				6EC272E12A4B2CEA00F308C4 /* bg */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
