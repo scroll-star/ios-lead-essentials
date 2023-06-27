@@ -7,9 +7,12 @@
 
 import UIKit
 
-public final class FeedViewController: UITableViewController {
-    private var refreshController: FeedRefreshViewController?
-    private var imageLoader: FeedImageDataLoader?
+protocol FeedViewControllerDelegate: AnyObject {
+    func didRequestFeedRefresh()
+}
+
+public final class FeedViewController: UITableViewController, FeedLoadingView {
+    var delegate: FeedViewControllerDelegate?
 
     var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
@@ -17,16 +20,21 @@ public final class FeedViewController: UITableViewController {
 
     private var cellControllers = [IndexPath: FeedImageCellController]()
 
-    convenience init(refreshController: FeedRefreshViewController) {
-        self.init()
-        self.refreshController = refreshController
-    }
-
     public override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.prefetchDataSource = self
-        refreshControl = refreshController?.view
-        refreshController?.refresh()
+        refresh()
+    }
+
+    func display(_ viewModel: FeedLoadingViewModel) {
+        if viewModel.isLoading {
+            refreshControl?.beginRefreshing()
+        } else {
+            refreshControl?.endRefreshing()
+        }
+    }
+
+    @IBAction private func refresh() {
+        delegate?.didRequestFeedRefresh()
     }
 
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
@@ -51,7 +59,7 @@ extension FeedViewController {
     }
 
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        cellController(forRowAt: indexPath).view()
+        cellController(forRowAt: indexPath).view(in: tableView)
     }
 
     public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
