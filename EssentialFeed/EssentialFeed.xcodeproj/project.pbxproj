@@ -201,6 +201,7 @@
 		6EC272D62A4B1D7F00F308C4 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		6EC272DA2A4B2A6B00F308C4 /* FeedUIIntegrationTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedUIIntegrationTests+Localization.swift"; sourceTree = "<group>"; };
 		6EC272DD2A4B2BD500F308C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		6EC272DF2A4B2C4C00F308C4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -705,6 +706,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 6EB734012A20CC7E0074E82B;
 			productRefGroup = 6EB7340C2A20CC7E0074E82B /* Products */;
@@ -909,6 +911,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6EC272DD2A4B2BD500F308C4 /* en */,
+				6EC272DF2A4B2C4C00F308C4 /* pt-BR */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
@@ -920,6 +923,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -984,6 +988,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
