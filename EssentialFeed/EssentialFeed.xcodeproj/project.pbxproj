@@ -77,6 +77,7 @@
 		6EC272D32A4B0FE500F308C4 /* FeedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC272D22A4B0FE500F308C4 /* FeedAssets.xcassets */; };
 		6EC272D52A4B1D2200F308C4 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272D42A4B1D2200F308C4 /* UITableView+Dequeueing.swift */; };
 		6EC272D72A4B1D7F00F308C4 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272D62A4B1D7F00F308C4 /* UIImageView+Animations.swift */; };
+		6EC272D92A4B29DD00F308C4 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EC272D82A4B29DD00F308C4 /* Feed.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +198,7 @@
 		6EC272D22A4B0FE500F308C4 /* FeedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FeedAssets.xcassets; sourceTree = "<group>"; };
 		6EC272D42A4B1D2200F308C4 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		6EC272D62A4B1D7F00F308C4 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
+		6EC272D82A4B29DD00F308C4 /* Feed.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Feed.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +538,7 @@
 		6EC272C32A448B5000F308C4 /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				6EC272D82A4B29DD00F308C4 /* Feed.strings */,
 				6EC272CA2A459EA500F308C4 /* FeedImagePresenter.swift */,
 				6EC272C62A448F3600F308C4 /* FeedImageViewModel.swift */,
 				6EC272CE2A45A09A00F308C4 /* FeedLoadingViewModel.swift */,
@@ -766,6 +769,7 @@
 			files = (
 				6EC272D32A4B0FE500F308C4 /* FeedAssets.xcassets in Resources */,
 				6EC272D12A4B0F6E00F308C4 /* Feed.storyboard in Resources */,
+				6EC272D92A4B29DD00F308C4 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
