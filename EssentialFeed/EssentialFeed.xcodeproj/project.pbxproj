@@ -74,6 +74,8 @@
 		6EC272CB2A459EA500F308C4 /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272CA2A459EA500F308C4 /* FeedImagePresenter.swift */; };
 		6EC272CD2A45A08F00F308C4 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272CC2A45A08F00F308C4 /* FeedViewModel.swift */; };
 		6EC272CF2A45A09A00F308C4 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272CE2A45A09A00F308C4 /* FeedLoadingViewModel.swift */; };
+		6EC272D12A4B0F6E00F308C4 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC272D02A4B0F6E00F308C4 /* Feed.storyboard */; };
+		6EC272D32A4B0FE500F308C4 /* FeedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC272D22A4B0FE500F308C4 /* FeedAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +193,8 @@
 		6EC272CA2A459EA500F308C4 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		6EC272CC2A45A08F00F308C4 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		6EC272CE2A45A09A00F308C4 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
+		6EC272D02A4B0F6E00F308C4 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		6EC272D22A4B0FE500F308C4 /* FeedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FeedAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,6 +467,8 @@
 		6EC272AC2A42E0A000F308C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6EC272D02A4B0F6E00F308C4 /* Feed.storyboard */,
+				6EC272D22A4B0FE500F308C4 /* FeedAssets.xcassets */,
 				6EC2729E2A41EF0400F308C4 /* FeedImageCell.swift */,
 				6EC272A02A41F53200F308C4 /* UIView+Shimmering.swift */,
 			);
@@ -755,6 +761,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC272D32A4B0FE500F308C4 /* FeedAssets.xcassets in Resources */,
+				6EC272D12A4B0F6E00F308C4 /* Feed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
