@@ -15,7 +15,15 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
     var delegate: FeedViewControllerDelegate?
 
     var tableModel = [FeedImageCellController]() {
-        didSet { tableView.reloadData() }
+        didSet {
+            if Thread.isMainThread {
+                tableView.reloadData()
+            } else {
+                DispatchQueue.main.async { [weak self] in
+                    self?.tableView.reloadData()
+                }
+            }
+        }
     }
 
     private var cellControllers = [IndexPath: FeedImageCellController]()
@@ -26,6 +34,10 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
     }
 
     func display(_ viewModel: FeedLoadingViewModel) {
+        guard Thread.isMainThread else {
+            return DispatchQueue.main.async { [weak self] in self?.display(viewModel) }
+        }
+
         if viewModel.isLoading {
             refreshControl?.beginRefreshing()
         } else {
