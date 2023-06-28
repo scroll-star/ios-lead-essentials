@@ -58,6 +58,15 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
     }
 }
 
+// MARK: - FeedErrorView
+
+extension FeedViewController: FeedErrorView {
+
+    func display(_ viewModel: FeedErrorViewModel) {
+        errorView.message = viewModel.message
+    }
+}
+
 // MARK: - UITableViewDataSource
 
 extension FeedViewController {
