@@ -30,11 +30,7 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
     }
 
     func display(_ viewModel: FeedLoadingViewModel) {
-        if viewModel.isLoading {
-            refreshControl?.beginRefreshing()
-        } else {
-            refreshControl?.endRefreshing()
-        }
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
 
     @IBAction private func refresh() {
