@@ -1,6 +1,8 @@
 # Essential Feed App – Image Feed Feature
 
-[![CI](https://github.com/scroll-star/ios-lead-essentials/actions/workflows/swift.yml/badge.svg)](https://github.com/scroll-star/ios-lead-essentials/actions/workflows/swift.yml)
+[![CI-iOS](https://github.com/scroll-star/ios-lead-essentials/actions/workflows/CI-iOS.yml/badge.svg)](https://github.com/scroll-star/ios-lead-essentials/actions/workflows/CI-iOS.yml)
+
+[![CI-macOS](https://github.com/scroll-star/ios-lead-essentials/actions/workflows/CI-macOS.yml/badge.svg)](https://github.com/scroll-star/ios-lead-essentials/actions/workflows/CI-macOS.yml)
 
 ## BDD Specs
 
