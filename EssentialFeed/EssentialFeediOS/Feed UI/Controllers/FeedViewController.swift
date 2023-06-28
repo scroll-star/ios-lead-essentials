@@ -14,6 +14,8 @@ protocol FeedViewControllerDelegate: AnyObject {
 public final class FeedViewController: UITableViewController, FeedLoadingView {
     var delegate: FeedViewControllerDelegate?
 
+    @IBOutlet private(set) public var errorView: ErrorView?
+
     var tableModel = [FeedImageCellController]() {
         didSet {
             tableView.reloadData()
@@ -28,11 +30,7 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
     }
 
     func display(_ viewModel: FeedLoadingViewModel) {
-        if viewModel.isLoading {
-            refreshControl?.beginRefreshing()
-        } else {
-            refreshControl?.endRefreshing()
-        }
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
 
     @IBAction private func refresh() {
@@ -49,6 +47,15 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
 
     private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
         cellController(forRowAt: indexPath).cancelLoad()
+    }
+}
+
+// MARK: - FeedErrorView
+
+extension FeedViewController: FeedErrorView {
+
+    func display(_ viewModel: FeedErrorViewModel) {
+        errorView?.message = viewModel.message
     }
 }
 
