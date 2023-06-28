@@ -84,6 +84,7 @@
 		6EC272E82A4C542900F308C4 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272E72A4C542900F308C4 /* WeakRefVirtualProxy.swift */; };
 		6EC272EA2A4C547C00F308C4 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272E92A4C547C00F308C4 /* FeedImageDataLoaderPresentationAdapter.swift */; };
 		6EC272EC2A4C54CC00F308C4 /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272EB2A4C54CC00F308C4 /* FeedLoaderPresentationAdapter.swift */; };
+		6EC272EE2A4C552800F308C4 /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272ED2A4C552800F308C4 /* FeedViewAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,7 @@
 		6EC272E72A4C542900F308C4 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		6EC272E92A4C547C00F308C4 /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		6EC272EB2A4C54CC00F308C4 /* FeedLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
+		6EC272ED2A4C552800F308C4 /* FeedViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,6 +536,7 @@
 				6EC272E92A4C547C00F308C4 /* FeedImageDataLoaderPresentationAdapter.swift */,
 				6EC272EB2A4C54CC00F308C4 /* FeedLoaderPresentationAdapter.swift */,
 				6EC272C12A42E6BC00F308C4 /* FeedUIComposer.swift */,
+				6EC272ED2A4C552800F308C4 /* FeedViewAdapter.swift */,
 				6EC272E52A4C53D900F308C4 /* MainQueueDispatchDecorator.swift */,
 				6EC272E72A4C542900F308C4 /* WeakRefVirtualProxy.swift */,
 			);
@@ -884,6 +887,7 @@
 				6EC272EA2A4C547C00F308C4 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				6EC272C72A448F3600F308C4 /* FeedImageViewModel.swift in Sources */,
 				6EC272BF2A42E54300F308C4 /* FeedImageCellController.swift in Sources */,
+				6EC272EE2A4C552800F308C4 /* FeedViewAdapter.swift in Sources */,
 				6EC272C22A42E6BC00F308C4 /* FeedUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
