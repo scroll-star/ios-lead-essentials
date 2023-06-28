@@ -7,3 +7,4 @@
 */
 
 "FEED_VIEW_TITLE" = "Моят Feed";
+"FEED_VIEW_CONNECTION_ERROR" = "Няма връзка със сървъра";
