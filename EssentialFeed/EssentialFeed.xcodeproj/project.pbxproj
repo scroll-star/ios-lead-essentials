@@ -91,6 +91,7 @@
 		6EC273182A4CA56300F308C4 /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC273172A4CA56300F308C4 /* FeedImageViewModel.swift */; };
 		6EC2731D2A4DD69700F308C4 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC272BA2A42E3C300F308C4 /* FeedImageDataLoader.swift */; };
 		6EC2731F2A4DD70A00F308C4 /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2731E2A4DD70A00F308C4 /* RemoteFeedImageDataLoaderTests.swift */; };
+		6EE038FB2A4DE6EA00072183 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE038FA2A4DE6EA00072183 /* HTTPClientSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +229,7 @@
 		6EC273152A4CA4F100F308C4 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		6EC273172A4CA56300F308C4 /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
 		6EC2731E2A4DD70A00F308C4 /* RemoteFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		6EE038FA2A4DE6EA00072183 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +369,7 @@
 		6EB734382A277D7F0074E82B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6EE038FA2A4DE6EA00072183 /* HTTPClientSpy.swift */,
 				6EC271882A32135700F308C4 /* SharedTestHelpers.swift */,
 				6EB734362A277D7A0074E82B /* XCTestsCase+MemoryLeakTracking.swift */,
 			);
@@ -871,6 +874,7 @@
 				6EB734372A277D7A0074E82B /* XCTestsCase+MemoryLeakTracking.swift in Sources */,
 				6EC273122A4CA0A500F308C4 /* FeedLocalizationTests.swift in Sources */,
 				6EC273112A4C9EE800F308C4 /* FeedPresenterTests.swift in Sources */,
+				6EE038FB2A4DE6EA00072183 /* HTTPClientSpy.swift in Sources */,
 				6EC271832A2F67EA00F308C4 /* FeedStoreSpy.swift in Sources */,
 				6EC271892A32135700F308C4 /* SharedTestHelpers.swift in Sources */,
 				6EC271752A2E2E2A00F308C4 /* CacheFeedUseCaseTests.swift in Sources */,
