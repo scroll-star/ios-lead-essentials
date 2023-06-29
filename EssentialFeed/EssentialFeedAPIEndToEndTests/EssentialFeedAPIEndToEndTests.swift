@@ -36,10 +36,13 @@ final class EssentialFeedAPIEndToEndTests: XCTestCase {
 
 private extension EssentialFeedAPIEndToEndTests {
 
+    var feedTestServerURL: URL {
+        URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
+    }
+
     func getFeedResult(file: StaticString = #file, line: UInt = #line) -> FeedLoader.Result? {
-        let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
         let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
-        let loader = RemoteFeedLoader(url: testServerURL, client: client)
+        let loader = RemoteFeedLoader(url: feedTestServerURL, client: client)
 
         trackForMemoryLeaks(client, file: file, line: line)
         trackForMemoryLeaks(loader, file: file, line: line)
@@ -56,7 +59,25 @@ private extension EssentialFeedAPIEndToEndTests {
         return receivedResult
     }
 
-    func expectedItem(at index: Int) -> FeedImage {
+    func getFeedImageDataResult(file: StaticString = #file, line: UInt = #line) -> FeedImageDataLoader.Result? {
+        let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+        let loader = RemoteFeedImageDataLoader(client: client)
+        trackForMemoryLeaks(client, file: file, line: line)
+        trackForMemoryLeaks(loader, file: file, line: line)
+
+        let exp = expectation(description: "Wait for load completion")
+
+        var receivedResult: FeedImageDataLoader.Result?
+        _ = loader.loadImageData(from: feedTestServerURL) { result in
+            receivedResult = result
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 5.0)
+
+        return receivedResult
+    }
+
+    func expectedImage(at index: Int) -> FeedImage {
         .init(
             id: id(at: index),
             description: description(at: index),
