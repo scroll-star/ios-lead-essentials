@@ -155,18 +155,6 @@ private extension URLSessionHTTPClientTests {
         return receivedResult
     }
 
-    func anyURL() -> URL {
-        .init(string: "http://any-url.com")!
-    }
-
-    func anyData() -> Data {
-        .init("any data".utf8)
-    }
-
-    func anyNSError() -> NSError {
-        .init(domain: "any error", code: 0)
-    }
-
     func anyHTTPURLResponse() -> HTTPURLResponse {
         .init(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
     }
