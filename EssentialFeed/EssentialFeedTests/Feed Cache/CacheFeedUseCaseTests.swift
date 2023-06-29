@@ -148,12 +148,4 @@ private extension CacheFeedUseCaseTests {
         let local = models.map { LocalFeedImage(id: $0.id, description: $0.description, location: $0.location, url: $0.url) }
         return (models, local)
     }
-
-    func anyURL() -> URL {
-        URL(string: "http://any-url.com")!
-    }
-
-    func anyNSError() -> NSError {
-        NSError(domain: "any error", code: 0)
-    }
 }
