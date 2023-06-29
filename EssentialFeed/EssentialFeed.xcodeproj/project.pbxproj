@@ -317,7 +317,7 @@
 				6EB7340E2A20CC7E0074E82B /* EssentialFeed.h */,
 				6EC271762A2E431C00F308C4 /* Feed Cache */,
 				6EB7342E2A20CCE30074E82B /* Feed Feature */,
-				6EB7342D2A20CCD90074E82B /* FeedAPI */,
+				6EB7342D2A20CCD90074E82B /* Feed API */,
 				6EC272FA2A4C79B000F308C4 /* FeedPresentation */,
 			);
 			path = EssentialFeed;
@@ -334,7 +334,7 @@
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
 		};
-		6EB7342D2A20CCD90074E82B /* FeedAPI */ = {
+		6EB7342D2A20CCD90074E82B /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
 				6EB734312A24E1BE0074E82B /* FeedItemsMapper.swift */,
@@ -343,7 +343,7 @@
 				6EB734272A20CCAB0074E82B /* RemoteFeedLoader.swift */,
 				6EB734392A2786840074E82B /* URLSessionHTTPClient.swift */,
 			);
-			path = FeedAPI;
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 		6EB7342E2A20CCE30074E82B /* Feed Feature */ = {
