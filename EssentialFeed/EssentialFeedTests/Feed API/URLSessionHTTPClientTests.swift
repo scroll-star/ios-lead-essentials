@@ -87,9 +87,9 @@ extension URLSessionHTTPClientTests {
         URLProtocolStub.observeRequests { _ in exp.fulfill() }
         let receivedError = resultErrorFor(taskHandler: { $0.cancel() }) as NSError?
 
-        XCTAssertEqual(receivedError?.code, URLError.cancelled.rawValue)
-
         wait(for: [exp], timeout: expectationTimeout)
+
+        XCTAssertEqual(receivedError?.code, URLError.cancelled.rawValue)
     }
 }
 
