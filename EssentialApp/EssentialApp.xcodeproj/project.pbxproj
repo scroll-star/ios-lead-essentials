@@ -25,6 +25,7 @@
 		6E864D9D2A504E4300DCC783 /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E864D9C2A504E4300DCC783 /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		6E864DA02A504EB300DCC783 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E864D9F2A504EB300DCC783 /* XCTestCase+MemoryLeakTracking.swift */; };
 		6E864DA22A504F0600DCC783 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E864DA12A504F0600DCC783 /* SharedTestHelpers.swift */; };
+		6E864DA42A5057C400DCC783 /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E864DA32A5057C400DCC783 /* FeedLoaderCacheDecoratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		6E864D9C2A504E4300DCC783 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		6E864D9F2A504EB300DCC783 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		6E864DA12A504F0600DCC783 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		6E864DA32A5057C400DCC783 /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6E864D992A504B3100DCC783 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
+				6E864DA32A5057C400DCC783 /* FeedLoaderCacheDecoratorTests.swift */,
 				6E864D952A50484B00DCC783 /* FeedLoaderWithFallbackCompositeTests.swift */,
 				6E864D9E2A504EA300DCC783 /* Helpers */,
 			);
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E864DA22A504F0600DCC783 /* SharedTestHelpers.swift in Sources */,
+				6E864DA42A5057C400DCC783 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				6E864D9B2A504B6D00DCC783 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				6E864D962A50484B00DCC783 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 				6E864DA02A504EB300DCC783 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
