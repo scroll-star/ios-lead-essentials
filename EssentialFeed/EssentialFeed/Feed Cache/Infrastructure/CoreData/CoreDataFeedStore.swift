@@ -16,17 +16,20 @@ public final class CoreDataFeedStore {
 
     enum StoreError: Error {
         case modelNotFound
+        case failedToLoadPersistentContainer(Error)
     }
 
     public init(storeURL: URL) throws {
-        let bundle = Bundle(for: CoreDataFeedStore.self)
-
         guard let model = CoreDataFeedStore.model else {
             throw StoreError.modelNotFound
         }
 
-        container = try NSPersistentContainer.load(modelName: Self.modelName, model: model, url: storeURL, in: bundle)
-        context = container.newBackgroundContext()
+        do {
+            container = try NSPersistentContainer.load(name: CoreDataFeedStore.modelName, model: model, url: storeURL)
+            context = container.newBackgroundContext()
+        } catch {
+            throw StoreError.failedToLoadPersistentContainer(error)
+        }
     }
 
     deinit {
