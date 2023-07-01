@@ -1,5 +1,5 @@
 //
-//  LocalFeedImageDataLoaderTests.swift
+//  LoadFeedImageDataFromCacheUseCaseTests.swift
 //  EssentialFeedTests
 //
 //  Created by Stoyan Kostov on 1.07.23.
@@ -8,7 +8,7 @@
 import EssentialFeed
 import XCTest
 
-final class LocalFeedImageDataLoaderTests: XCTestCase {
+final class LoadFeedImageDataFromCacheUseCaseTests: XCTestCase {
 
     func test_init_doesNotMessageStoreUponCreation() {
         let (_, store) = makeSUT()
@@ -92,7 +92,7 @@ final class LocalFeedImageDataLoaderTests: XCTestCase {
 
 // MARK: - Helpers (private)
 
-private extension LocalFeedImageDataLoaderTests {
+private extension LoadFeedImageDataFromCacheUseCaseTests {
 
     func makeSUT(
         currentDate: @escaping () -> Date = Date.init,
