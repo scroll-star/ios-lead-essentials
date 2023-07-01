@@ -78,10 +78,6 @@ private extension FeedLoaderWithFallbackCompositeTests {
         wait(for: [exp], timeout: 1.0)
     }
 
-    func uniqueFeed() -> [FeedImage] {
-        [FeedImage(id: UUID(), description: "any", location: "any", url: URL(string: "http://any-url.com")!)]
-    }
-
     final class LoaderStub: FeedLoader {
         private let result: FeedLoader.Result
 
