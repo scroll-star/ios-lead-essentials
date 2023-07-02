@@ -10,10 +10,7 @@ import XCTest
 final class EssentialAppUIAcceptanceTests: XCTestCase {
 
     func test_onLaunch_displaysRemoteFeedWhenCustomerHasConnectivity() {
-        let app = XCUIApplication()
-
-        app.launchArguments = ["-reset", "-connectivity", "online"]
-        app.launch()
+        let app = makeSUTAndLaunch(options: .reset, .connectivity(.online))
 
         let feedCells = app.cells.matching(identifier: "feed-image-cell")
         XCTAssertEqual(feedCells.count, 2)
@@ -23,13 +20,9 @@ final class EssentialAppUIAcceptanceTests: XCTestCase {
     }
 
     func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
-        let onlineApp = XCUIApplication()
-        onlineApp.launchArguments = ["-reset", "-connectivity", "online"]
-        onlineApp.launch()
+        makeSUTAndLaunch(options: .reset, .connectivity(.online))
 
-        let offlineApp = XCUIApplication()
-        offlineApp.launchArguments = ["-connectivity", "offline"]
-        offlineApp.launch()
+        let offlineApp = makeSUTAndLaunch(options: .connectivity(.offline))
 
         let cachedFeedCells = offlineApp.cells.matching(identifier: "feed-image-cell")
         XCTAssertEqual(cachedFeedCells.count, 2)
@@ -39,11 +32,44 @@ final class EssentialAppUIAcceptanceTests: XCTestCase {
     }
 
     func test_onLaunch_displaysEmptyFeedWhenCustomerHasNoConnectivityAndNoCache() {
-        let app = XCUIApplication()
-        app.launchArguments = ["-reset", "-connectivity", "offline"]
-        app.launch()
+        let app = makeSUTAndLaunch(options: .reset, .connectivity(.offline))
 
         let feedCells = app.cells.matching(identifier: "feed-image-cell")
         XCTAssertEqual(feedCells.count, 0)
+    }
+}
+
+// MARK: - Helpers (private)
+
+private extension EssentialAppUIAcceptanceTests {
+    enum Connectivity: String {
+        case online
+        case offline
+    }
+
+    enum Option {
+        case reset
+        case connectivity(Connectivity)
+    }
+
+    @discardableResult
+    func makeSUTAndLaunch(options: Option...) -> XCUIApplication {
+        let app = XCUIApplication()
+        app.launchArguments = options.mapToLaunchArguments()
+        app.launch()
+        return app
+    }
+}
+
+private extension Array where Element == EssentialAppUIAcceptanceTests.Option {
+    func mapToLaunchArguments() -> [String] {
+        flatMap { option in
+            switch option {
+            case .reset:
+                return ["-reset"]
+            case let .connectivity(connectivity):
+                return ["-connectivity", connectivity.rawValue]
+            }
+        }
     }
 }
