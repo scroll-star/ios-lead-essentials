@@ -91,6 +91,9 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-Tt-p4U">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="feed-image-view">
+                                                                <bool key="isElement" value="YES"/>
+                                                            </accessibility>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuE-io-4lP">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
@@ -143,6 +146,9 @@
                                         <constraint firstItem="BUa-Zk-WXp" firstAttribute="leading" secondItem="Xzm-fo-SLJ" secondAttribute="leadingMargin" id="yja-a7-MRf"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="feed-image-cell">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Khd-Ss-Ypx" id="2JB-6o-eBT"/>
                                     <outlet property="feedImageContainer" destination="hIb-Cl-ajL" id="IdB-jT-4Xy"/>
