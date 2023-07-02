@@ -15,8 +15,10 @@ public final class LocalFeedImageDataLoader {
     }
 }
 
-extension LocalFeedImageDataLoader {
-    public typealias SaveResult = Result<Void, Error>
+// MARK: - FeedImageDataCache
+
+extension LocalFeedImageDataLoader: FeedImageDataCache {
+    public typealias SaveResult = FeedImageDataCache.Result
 
     public enum SaveError: Error {
         case failed
@@ -30,6 +32,8 @@ extension LocalFeedImageDataLoader {
         }
     }
 }
+
+// MARK: - FeedImageDataLoader
 
 extension LocalFeedImageDataLoader: FeedImageDataLoader {
     public typealias LoadResult = FeedImageDataLoader.Result
