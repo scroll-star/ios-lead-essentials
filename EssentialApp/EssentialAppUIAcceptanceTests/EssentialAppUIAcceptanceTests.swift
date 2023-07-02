@@ -20,7 +20,7 @@ final class EssentialAppUIAcceptanceTests: XCTestCase {
     }
 
     func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
-        makeSUTAndLaunch(options: .reset, .connectivity(.online))
+        makeAndLaunchOnlineApplicationDiscardingResult()
 
         let offlineApp = makeSUTAndLaunch(options: .connectivity(.offline))
 
@@ -58,6 +58,10 @@ private extension EssentialAppUIAcceptanceTests {
         app.launchArguments = options.mapToLaunchArguments()
         app.launch()
         return app
+    }
+
+    private func makeAndLaunchOnlineApplicationDiscardingResult() {
+        makeSUTAndLaunch(options: .reset, .connectivity(.online))
     }
 }
 
