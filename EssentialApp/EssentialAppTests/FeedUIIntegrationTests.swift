@@ -5,10 +5,11 @@
 //  Created by Stoyan Kostov on 20.06.23.
 //
 
-import XCTest
-import UIKit
+import EssentialApp
 import EssentialFeed
 import EssentialFeediOS
+import UIKit
+import XCTest
 
 final class FeedUIIntegrationTests: XCTestCase {
 
@@ -16,7 +17,7 @@ final class FeedUIIntegrationTests: XCTestCase {
         let (sut, _) = makeSUT()
 
         sut.loadViewIfNeeded()
-        
+
         XCTAssertEqual(sut.title, localized("FEED_VIEW_TITLE"))
     }
 
@@ -260,7 +261,7 @@ final class FeedUIIntegrationTests: XCTestCase {
     func test_loadFeedCompletion_dispatchesFromBackgroundToMainThread() {
         let (sut, loader) = makeSUT()
         sut.loadViewIfNeeded()
-        
+
         let exp = expectation(description: "Wait for background queue")
         DispatchQueue.global().async {
             loader.completeFeedLoading(at: 0)

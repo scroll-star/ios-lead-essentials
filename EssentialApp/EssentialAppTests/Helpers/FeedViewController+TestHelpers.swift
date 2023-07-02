@@ -5,8 +5,8 @@
 //  Created by Stoyan Kostov on 21.06.23.
 //
 
-import UIKit
 import EssentialFeediOS
+import UIKit
 
 extension FeedViewController {
 
@@ -16,6 +16,10 @@ extension FeedViewController {
 
     var isShowingLoadingIndicator: Bool {
         refreshControl?.isRefreshing == true
+    }
+
+    func renderedFeedImageData(at index: Int) -> Data? {
+        simulateFeedImageViewVisible(at: index)?.renderedImage
     }
 
     @discardableResult
@@ -57,6 +61,9 @@ extension FeedViewController {
     }
 
     func feedImageView(at row: Int) -> UITableViewCell? {
+        guard numberOfRenderedFeedImageViews() > row else {
+            return nil
+        }
         let ds = tableView.dataSource
         let index = IndexPath(row: row, section: feedImagesSection)
         return ds?.tableView(tableView, cellForRowAt: index)
