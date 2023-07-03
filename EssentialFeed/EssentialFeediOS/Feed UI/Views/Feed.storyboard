@@ -20,8 +20,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIQ-DH-w3l">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
-                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    <rect key="frame" x="8" y="8" width="374" height="18"/>
                                     <gestureRecognizers/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,12 +30,12 @@
                                     </connections>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="rIQ-DH-w3l" secondAttribute="bottom" id="Fvv-K7-S1T"/>
-                                <constraint firstItem="rIQ-DH-w3l" firstAttribute="leading" secondItem="PlE-gb-r74" secondAttribute="leading" id="dGK-KQ-nxs"/>
-                                <constraint firstAttribute="trailing" secondItem="rIQ-DH-w3l" secondAttribute="trailing" id="idQ-gF-9QX"/>
-                                <constraint firstItem="rIQ-DH-w3l" firstAttribute="top" secondItem="PlE-gb-r74" secondAttribute="top" id="z9s-Rd-JPN"/>
+                                <constraint firstItem="rIQ-DH-w3l" firstAttribute="trailing" secondItem="PlE-gb-r74" secondAttribute="trailingMargin" id="9i5-DW-XxS"/>
+                                <constraint firstItem="rIQ-DH-w3l" firstAttribute="leading" secondItem="PlE-gb-r74" secondAttribute="leadingMargin" id="cjN-J2-3FT"/>
+                                <constraint firstItem="rIQ-DH-w3l" firstAttribute="bottom" secondItem="PlE-gb-r74" secondAttribute="bottomMargin" id="g8E-7r-d1u"/>
+                                <constraint firstItem="rIQ-DH-w3l" firstAttribute="top" secondItem="PlE-gb-r74" secondAttribute="topMargin" id="iYd-cl-3hX"/>
                             </constraints>
                             <connections>
                                 <outlet property="label" destination="rIQ-DH-w3l" id="wBr-uo-6H6"/>
