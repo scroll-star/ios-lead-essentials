@@ -5,8 +5,8 @@
 //  Created by Stoyan Kostov on 20.06.23.
 //
 
-import UIKit
 import EssentialFeed
+import UIKit
 
 public protocol FeedViewControllerDelegate: AnyObject {
     func didRequestFeedRefresh()
@@ -15,7 +15,7 @@ public protocol FeedViewControllerDelegate: AnyObject {
 public final class FeedViewController: UITableViewController, FeedLoadingView {
     public var delegate: FeedViewControllerDelegate?
 
-    @IBOutlet private(set) public var errorView: ErrorView?
+    @IBOutlet public private(set) var errorView: ErrorView?
 
     private var tableModel = [FeedImageCellController]() {
         didSet {
@@ -25,9 +25,15 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
 
     private var cellControllers = [IndexPath: FeedImageCellController]()
 
-    public override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         refresh()
+    }
+
+    override public func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        tableView.sizeTableHeaderToFit()
     }
 
     public func display(_ viewModel: FeedLoadingViewModel) {
@@ -68,15 +74,15 @@ extension FeedViewController: FeedErrorView {
 
 extension FeedViewController {
 
-    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableModel.count
     }
 
-    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         cellController(forRowAt: indexPath).view(in: tableView)
     }
 
-    public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    override public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cancelCellControllerLoad(forRowAt: indexPath)
     }
 }

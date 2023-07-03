@@ -16,6 +16,7 @@
 		6E2BD8652A502A80002FCBEB /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BD8642A502A80002FCBEB /* CoreDataFeedStore+FeedImageDataLoader.swift */; };
 		6E4B4EB62A51852B00D0C0B1 /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4B4EB52A51852B00D0C0B1 /* FeedCache.swift */; };
 		6E4B4EC02A518C2B00D0C0B1 /* FeedImageDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4B4EBF2A518C2B00D0C0B1 /* FeedImageDataCache.swift */; };
+		6E6381F12A52B25C000DEDB0 /* UITableView+HeaderSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6381F02A52B25C000DEDB0 /* UITableView+HeaderSizing.swift */; };
 		6EB734162A20CC7E0074E82B /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB7340B2A20CC7E0074E82B /* EssentialFeed.framework */; };
 		6EB7341C2A20CC7E0074E82B /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB7340E2A20CC7E0074E82B /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EB734262A20CC9F0074E82B /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB734252A20CC9F0074E82B /* LoadFeedFromRemoteUseCaseTests.swift */; };
@@ -153,6 +154,7 @@
 		6E2BD8642A502A80002FCBEB /* CoreDataFeedStore+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 		6E4B4EB52A51852B00D0C0B1 /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 		6E4B4EBF2A518C2B00D0C0B1 /* FeedImageDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataCache.swift; sourceTree = "<group>"; };
+		6E6381F02A52B25C000DEDB0 /* UITableView+HeaderSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderSizing.swift"; sourceTree = "<group>"; };
 		6EB7340B2A20CC7E0074E82B /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB7340E2A20CC7E0074E82B /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		6EB734152A20CC7E0074E82B /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,7 +287,6 @@
 				6EB734402A279B540074E82B /* EssentialFeedAPIEndToEndTests */,
 				6EC271B22A389CAA00F308C4 /* EssentialFeedCacheIntegrationTests */,
 				6EC2727F2A4076DC00F308C4 /* EssentialFeediOS */,
-				6EC272892A4076DC00F308C4 /* EssentialFeediOSTests */,
 				6EB7340C2A20CC7E0074E82B /* Products */,
 				6EC272952A41DE6900F308C4 /* Frameworks */,
 				6EC2730E2A4C9EA000F308C4 /* Recovered References */,
@@ -474,13 +475,6 @@
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
 		};
-		6EC272892A4076DC00F308C4 /* EssentialFeediOSTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EssentialFeediOSTests;
-			sourceTree = "<group>";
-		};
 		6EC272952A41DE6900F308C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,6 +532,7 @@
 				6EC272D62A4B1D7F00F308C4 /* UIImageView+Animations.swift */,
 				6EC273092A4C9AC200F308C4 /* UIRefreshControl+Helpers.swift */,
 				6EC272D42A4B1D2200F308C4 /* UITableView+Dequeueing.swift */,
+				6E6381F02A52B25C000DEDB0 /* UITableView+HeaderSizing.swift */,
 				6EC272A02A41F53200F308C4 /* UIView+Shimmering.swift */,
 			);
 			path = Helpers;
@@ -908,6 +903,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6381F12A52B25C000DEDB0 /* UITableView+HeaderSizing.swift in Sources */,
 				6EC273052A4C86BC00F308C4 /* ErrorView.swift in Sources */,
 				6EC2730A2A4C9AC200F308C4 /* UIRefreshControl+Helpers.swift in Sources */,
 				6EC272A12A41F53200F308C4 /* UIView+Shimmering.swift in Sources */,
