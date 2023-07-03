@@ -14,7 +14,7 @@ final class FeedSnapshotTests: XCTestCase {
     func test_emptyFeed() {
         let sut = makeSUT()
 
-        sut.display(model: emptyFeed)
+        sut.display(cellControllers: emptyFeed)
 
         assert(snapshot: sut.snapshot(for: .iPhone14(style: .light)), named: "EMPTY_FEED_light")
         assert(snapshot: sut.snapshot(for: .iPhone14(style: .dark)), named: "EMPTY_FEED_dark")
@@ -102,7 +102,7 @@ private extension FeedViewController {
             return cellController
         }
 
-        display(model: cells)
+        display(cellControllers: cells)
     }
 }
 

@@ -17,6 +17,8 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
 
     @IBOutlet public private(set) var errorView: ErrorView?
 
+    private var loadingControllers = [IndexPath: FeedImageCellController]()
+
     private var tableModel = [FeedImageCellController]() {
         didSet {
             tableView.reloadData()
@@ -40,8 +42,9 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
         refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
 
-    public func display(model: [FeedImageCellController]) {
-        tableModel = model
+    public func display(cellControllers: [FeedImageCellController]) {
+        loadingControllers = [:]
+        tableModel = cellControllers
     }
 
     @IBAction private func refresh() {
@@ -49,7 +52,9 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
     }
 
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
-        tableModel[indexPath.row]
+        let controller = tableModel[indexPath.row]
+        loadingControllers[indexPath] = controller
+        return controller
     }
 
     private func removeCellController(forRowAt indexPath: IndexPath) {
@@ -57,7 +62,8 @@ public final class FeedViewController: UITableViewController, FeedLoadingView {
     }
 
     private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
-        cellController(forRowAt: indexPath).cancelLoad()
+        loadingControllers[indexPath]?.cancelLoad()
+        loadingControllers[indexPath] = nil
     }
 }
 
