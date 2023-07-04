@@ -21,7 +21,7 @@ final class SceneDelegateTests: XCTestCase {
         XCTAssertEqual(window.makeKeyAndVisibleCallCount, 1, "Expected makeKeyAndVisible to be called once, instead it is called \(window.makeKeyAndVisibleCallCount) times.")
     }
 
-    func test_sceneWillConnectToSession_configuresRootViewController() {
+    func test_configureWindow_configuresRootViewController() {
         let sut = SceneDelegate()
         sut.window = UIWindow()
 
